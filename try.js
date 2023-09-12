@@ -23,5 +23,16 @@
 
 document.querySelector("#check-btn").addEventListener("click", function(){
    var num = document.querySelector("#numTextField").value;
-    console.log(num);
+    try{
+        if(num < 5){
+            throw "Input is too low";
+        }else if(num > 10){
+            throw "Input is so long";
+        }
+    }
+    catch(err){
+console.log(err);
+
+    }
+    
 })
